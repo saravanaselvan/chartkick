@@ -646,7 +646,7 @@
           var data = createDataTable(chart.data, "string");
           chart.chart = new google.visualization.ColumnChart(chart.element);
           resize(function () {
-            chart.chart.draw(data, options);
+            chart.chart.draw(data, google.charts.Column.convertOptions(options));
           });
         });
       };
